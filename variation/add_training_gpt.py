@@ -12,7 +12,7 @@ args = parser.parse_args()
 
 sent_dict = pickle.load(open(args.pickle_file, mode="rb"))
 train_file = open(args.train_file)
-model = gpt_score2.Model()
+model = gpt_score.Model()
 
 sents_to_add_1 = []
 sents_to_add_2 = []
