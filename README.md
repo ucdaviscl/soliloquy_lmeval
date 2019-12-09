@@ -11,7 +11,7 @@ These scripts generate sentence alternatives using a large FST language model. T
 - pytorch_pretrained_bert (from HuggingFace)
 
 ### Generating alternate sentences:
-Use get_fst_paraphrases.py to generate alternate sentences using an FST to identify likely alternates.
+- Run get_fst_paraphrases.py to generate alternate sentences using an FST language model.
 
 ```
 python get_fst_paraphrases.py -v pretrained_word_vectors.txt -f large_FST_language_model/
@@ -58,7 +58,7 @@ ngramread --ARPA --epsilon_symbol='<eps>' input.arpa > output.fst
 ```
 awer.py -u unigram_model -f fst_file.fst < test_data
 ```
-- If you would like you AWER results written to file, you my uncomment the outfile lines (145 & 162) in the awer.py script.
+- If you would like AWER results written to file, uncomment the outfile lines (145 & 162) in the awer.py script.
 
 ##### Vocabulary Coverage
 - Run oov.py to calculate the vocabulary coverage of your test file given your training file. 
