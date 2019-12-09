@@ -142,7 +142,7 @@ def main(argv):
     print("Ready")
     totalerr = 0
     linecnt = 0
-    outfile = open("results/awer_results.txt", mode="a+")
+#    outfile = open("results/awer_results.txt", mode="a+")
     for line in sys.stdin:
         print("Processing")
         linecnt += 1
@@ -159,7 +159,7 @@ def main(argv):
         totalerr = totalerr / linecnt
     print("AWER: %.5f" % totalerr)
     result = "AWER: %.5f" % totalerr
-    outfile.write(fstfname[:-4] + ":" + result)
+#    outfile.write(fstfname[:-4] + ":" + result)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

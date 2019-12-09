@@ -45,18 +45,18 @@ for sent in sent_dict:
     for i in range(3):
         if len(scored_alternatives) > i:
             sents_to_add_3.append(scored_alternatives[i][0])
-        else:
-            continue
-    for i in range(4):
-        if len(scored_alternatives) > i:
-            sents_to_add_4.append(scored_alternatives[i][0])
-        else:
-            continue
-    for i in range(5):
-        if len(scored_alternatives) > i:
-            sents_to_add_5.append(scored_alternatives[i][0])
-        else:
-            continue
+            else:
+                continue
+        for i in range(4):
+            if len(scored_alternatives) > i:
+                sents_to_add_4.append(scored_alternatives[i][0])
+            else:
+                continue
+        for i in range(5):
+            if len(scored_alternatives) > i:
+                sents_to_add_5.append(scored_alternatives[i][0])
+            else:
+                continue
 
     index += 1
     print('Completed sentence: '+ str(index), flush=True)
@@ -96,3 +96,4 @@ outfile_2.close()
 outfile_3.close()
 outfile_4.close()
 outfile_5.close()
+train_file.close()
